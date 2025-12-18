@@ -3,7 +3,7 @@ const router = express.Router();
 const Article=require("../models/article")
 const Scategorie =require("../models/scategorie")
 // afficher la liste des articles.
-router.get('/', async (req, res, )=> {
+router.get('/', async (req, res )=>{
 try {
 const articles = await Article.find({}, null, {sort: {'_id': -
 1}}).populate("scategorieID").exec();
